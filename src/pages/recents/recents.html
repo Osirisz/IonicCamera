@@ -1,0 +1,28 @@
+<!--
+  Generated template for the RecentsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Recents</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-list>
+		<ion-item *ngFor="let recent of recents">
+			<ion-label>
+			<ion-icon name="call" icon-left></ion-icon>
+			{{recent.firstname}} {{recent.lastname}}
+			</ion-label>
+			<ion-label text-right class="fixedLabel">
+				{{recent.time}}
+			</ion-label>
+		</ion-item>
+	</ion-list>
+</ion-content>

@@ -1,0 +1,68 @@
+<!--
+  Generated template for the ContactDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Contact</ion-title>
+	<ion-buttons end>
+		<button ion-button icon-left (click)="editContact()">Edit</button>
+	</ion-buttons>	
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card text-center>
+		<img class="img-circle" src="{{picture}}"/>
+	</ion-card>
+	<ion-list>
+		<ion-item *ngIf="contactDetail.prefix">
+			<ion-label fixed class='fixedLabel'>
+				prefix
+			</ion-label>
+			<ion-label>
+				{{contactDetail.prefix}}
+			</ion-label>
+		</ion-item>
+		<ion-item>
+			<ion-label fixed class='fixedLabel'>
+				First name
+			</ion-label>
+			<ion-label>
+				{{contactDetail.firstname}}
+			</ion-label>
+		</ion-item>
+		<ion-item>
+			<ion-label fixed class='fixedLabel'>
+				Last name
+			</ion-label>
+			<ion-label>
+				{{contactDetail.lastname}}
+			</ion-label>
+		</ion-item>
+		<ion-item>
+			<ion-label fixed class='fixedLabel'>
+				email
+			</ion-label>
+			<ion-label>
+				{{contactDetail.email}}
+			</ion-label>		
+		</ion-item>
+		<ion-item>
+			<ion-label fixed class='fixedLabel'>
+				phone
+			</ion-label>
+			<ion-label color="primary" (click)="callPhone(contactDetail)">
+				{{contactDetail.phone}}
+			</ion-label>			
+		</ion-item>
+		<ion-item>
+			<button ion-button (click)="addFavorite(contactDetail)">Add to Favorites</button>			
+		</ion-item>
+	</ion-list>
+</ion-content>

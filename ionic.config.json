@@ -1,5 +1,8 @@
 {
-  "name": "ionic-contacts",
-  "app_id": "",
+  "name": "ionic-contact",
+  "app_id": "8ce96223",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
